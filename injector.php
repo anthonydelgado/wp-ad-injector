@@ -18,7 +18,7 @@ add_action('wp_head', 'header_ads_js');
 
 function header_ads_js() {
 	/** This is the JS to be added to the header */
-	$the_header_ads_js = '<script type="text/javascript" src="' . plugins_url() . 'showcase.js"></script>
+	$the_header_ads_js = '<script type="text/javascript" src="' . plugins_url() . '/wp-ad-injector-master/showcase.js"></script>
 	<!-- wp-ad-injector Plug-in by Anthony Delgado -->';
 	echo $the_header_ads_js;
 
