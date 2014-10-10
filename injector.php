@@ -18,7 +18,7 @@ add_action('wp_head', 'header_ads_js');
 
 function header_ads_js() {
 	/** This is the JS to be added to the header */
-	$the_header_ads_js = '<script type="text/javascript" src="http://blog.craniumfitteds.com/showcase.js"></script>
+	$the_header_ads_js = '<script type="text/javascript" src="' . plugins_url() . 'showcase.js"></script>
 	<!-- wp-ad-injector Plug-in by Anthony Delgado -->';
 	echo $the_header_ads_js;
 
@@ -109,7 +109,7 @@ class CraniumFitteds_Ad_Widget extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		echo __( '<script type="text/javascript">
 show_banners("300x250");
-</script>', 'text_domain' );
+</script>', 'text_domain' ); 
 		echo $args['after_widget'];
 	}
 
@@ -125,7 +125,7 @@ show_banners("300x250");
 			$title = $instance[ 'title' ];
 		}
 		else {
-			$title = __( 'Shop.CraniumFitteds.com!', 'text_domain' );
+			$title = __( 'Sponsored', 'text_domain' );
 		}
 		?>
 		<p>
